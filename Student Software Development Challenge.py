@@ -34,11 +34,9 @@ def calculate_factorial(n):
     else:
         return n * calculate_factorial(n-1)
     
-def calculate_factorial_advanced(n):
-    result = lambda num : num if num == 1 else num * calculate_factorial_advanced(num-1)
-    return result(n)
+calculate_factorial_advanced = lambda n : n if n == 1 else n * calculate_factorial_advanced(n-1)
 
-print(calculate_factorial_advanced(3))
+print(calculate_factorial(3))
 
 
 # Calculate the 'n'th entry of the Fibonacci sequence
